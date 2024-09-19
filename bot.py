@@ -64,7 +64,7 @@ async def handle_message(update: Update, context):
         amount = float(match.group())
         save_transaction(chat_id, amount)
         total = get_total(chat_id)
-        await update.message.reply_text(f"Amount added: {amount}\nYour current total: {total}")
+        await update.message.reply_text(f"Amount added: {amount}\nTotal: {total}")
     else:
         await update.message.reply_text("Please send a valid number starting with + or -.")
 
@@ -142,7 +142,7 @@ async def helpme(update: Update, context):
 
 # Bot initialization
 def main():
-    application = Application.builder().token('7457442840:AAG5ioBPW415GnIasz5oWPmDrDphGunImoY').build()
+    application = Application.builder().token('7403256647:AAFVG8PsBEkGSbOCvy_PVDE8zLz4PXKBb0w').build()
 
     # Command handlers mapped in a dictionary
     commands = {
